@@ -1,1 +1,3 @@
-# InstantRPH
+# Instant Random Phase Holography with Parallax and Defocus Cues
+
+Coming soon...
