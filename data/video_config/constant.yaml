@@ -1,0 +1,4 @@
+# Example trajectory: constant focus distance throughout video
+description: "Constant focus at 98mm"
+base_distance_mm: 98.0
+sweeps: []

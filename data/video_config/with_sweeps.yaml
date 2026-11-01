@@ -1,0 +1,22 @@
+# Example trajectory: focus at 100 mm, with focal sweeps at frames 50 and 150.
+# As rendered, a sweep only changes the focus of its frame_idx frame, to distance_start_mm,
+# so the rendered distances are 100 mm plus each sweep's distance_start_mm
+# (see "Known limitations" in docs/VIDEO_PROCESSING.md).
+description: "Focus at 100 mm with focal sweeps at frames 50 and 150"
+base_distance_mm: 100.0
+
+# Each sweep defines:
+# - frame_idx: frame where the sweep starts
+# - distance_start_mm: focus distance at that frame
+# - distance_end_mm: other end of the sweep (no effect as rendered)
+# - duration_frames: frames per one-way pass (no effect as rendered)
+sweeps:
+  - frame_idx: 50
+    distance_start_mm: 95.0
+    distance_end_mm: 105.0
+    duration_frames: 30
+    
+  - frame_idx: 150
+    distance_start_mm: 98.0
+    distance_end_mm: 102.0
+    duration_frames: 40

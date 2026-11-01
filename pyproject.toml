@@ -1,0 +1,23 @@
+[project]
+name = "instantrph"
+version = "0.1.0"
+description = "Instant Random Phase Holography with Parallax and Defocus Cues (InstantRPH)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=2.4",
+    "numpy>=1.26",
+    "pillow>=10.0",
+    "matplotlib>=3.8",
+    "tqdm>=4.66",
+    "pyyaml>=6.0",
+    "scikit-image>=0.22",
+    "accelerate>=0.30",
+    "tensorboard>=2.16",
+]
+
+[tool.uv]
+# torch is CUDA-build-specific; install the wheel matching your CUDA driver
+# separately (e.g. via https://pytorch.org/get-started/locally/) if the
+# default PyPI wheel does not match your setup, then `uv sync --no-install-package torch`.

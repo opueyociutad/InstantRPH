@@ -1,0 +1,25 @@
+# Example trajectory: three focal sweeps with different ranges and durations.
+# As rendered, a sweep only changes the focus of its frame_idx frame, to distance_start_mm,
+# so the rendered distances are 100 mm plus each sweep's distance_start_mm
+# (see "Known limitations" in docs/VIDEO_PROCESSING.md).
+description: "Focal sweeps at frames 0, 100 and 200 with different ranges and durations"
+base_distance_mm: 100.0
+
+sweeps:
+  # Narrow range, long pass
+  - frame_idx: 0
+    distance_start_mm: 98.0
+    distance_end_mm: 102.0
+    duration_frames: 60
+    
+  # Wide range, short pass
+  - frame_idx: 100
+    distance_start_mm: 95.0
+    distance_end_mm: 105.0
+    duration_frames: 20
+    
+  # Narrowest range, longest pass
+  - frame_idx: 200
+    distance_start_mm: 99.0
+    distance_end_mm: 101.0
+    duration_frames: 80
